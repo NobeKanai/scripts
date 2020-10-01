@@ -5,10 +5,7 @@
 let body = $response.body;
 let obj = JSON.parse(body);
 
-let replys = obj.replys.filter(reply => reply.id != 9999999);
-
-obj.replys = replys;
+obj.replys = obj.replys.filter(reply => reply.id != 9999999);
 console.log(obj);
-$done({
-    body: JSON.stringify(obj)
-});
+
+$done(JSON.stringify(obj));
