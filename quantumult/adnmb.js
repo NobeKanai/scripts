@@ -6,6 +6,5 @@ let body = $response.body;
 let obj = JSON.parse(body);
 
 obj.replys = obj.replys.filter(reply => reply.id != 9999999);
-console.log(obj);
 
 $done(JSON.stringify(obj));
