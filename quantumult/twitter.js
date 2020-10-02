@@ -1,11 +1,14 @@
 // ^https?://api\.twitter\.com/\d/timeline/home\.json
 
-if ($request.method.toLowerCase() == 'options')
-    $done();
+let body = $response.body;
 
-let obj = JSON.parse($response.body);
+// 如果options选项不是get, 直接结束
+if ($request.method.toLowerCase() != 'get')
+    $done(body);
+
+
+let obj = JSON.parse(body);
 let tweets = obj.globalObjects.tweets;
-
 let re = new RegExp(".*ads-api\.twitter\.com.*");
 
 // 计数器
