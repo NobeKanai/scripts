@@ -1,6 +1,6 @@
-/*
-^https?://adnmb3\.com/Api/thread\?id= url script-response-body https://raw.githubusercontent.com/NobeKanai/scripts/master/quantumult/adnmb.js
-*/
+/**
+ * ^https?://adnmb3\.com/Api/thread\?id=
+ */
 
 let body = $response.body;
 let obj = JSON.parse(body);

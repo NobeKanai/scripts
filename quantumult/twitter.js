@@ -1,4 +1,6 @@
-// ^https?://api\.twitter\.com/\d/timeline/home\.json
+/**
+ * ^https?://api\.twitter\.com/\d/timeline/home\.json
+ */
 
 let body = $response.body;
 
