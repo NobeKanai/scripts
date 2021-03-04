@@ -4,7 +4,7 @@
 
 
 // if 403 redirect to parent url
-if ($response.statusCode == 403) {
+if ($response.statusCode != 403) {
     console.log("skipped")
     $done({})
 }
