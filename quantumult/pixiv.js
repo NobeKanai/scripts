@@ -12,7 +12,7 @@ if ($response.statusCode != 403) {
 // find pic id
 const path = $request.path;
 console.log("path is " + path)
-const fileName = "".split('/').pop()
+const fileName = path.split('/').pop()
 console.log("fileName is " + fileName)
 const picId = /[0-9]+/.exec(fileName)[0]
 
